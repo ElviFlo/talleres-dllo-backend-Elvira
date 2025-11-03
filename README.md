@@ -125,3 +125,197 @@ node Taller2.js
 node Taller3.js
 ```
 ---
+## 📝 Taller 04 – API Backend (Express)
+📌 **Objetivo:** Exponer en una **API REST** (Node.js + Express) todas las funciones de los talleres anteriores (1, 2 y 3), cada punto con su **endpoint POST**.  
+📁 **Carpetas/archivos clave:**
+- `main.js` (punto de entrada)
+- `src/app.js` (configuración de Express)
+- `src/routes/taller1.routes.js`
+- `src/routes/taller2.routes.js`
+- `src/routes/taller3.routes.js`
+
+> **Puerto por defecto:** `3005` (puedes cambiarlo con la variable `PORT`).
+
+### ▶️ Instalación (si no lo hiciste antes)
+```bash
+npm install
+```
+
+### ✅ Verificar API
+```bash
+curl http://localhost:3005
+```
+
+Salida esperada:
+```json
+{"message":"API Funcionando"}
+```
+## 🔌 Rutas disponibles
+
+### 🧪 Taller 1 — Prefijo: `/api/taller1`
+1) **convertidorTemp**  
+`POST /api/taller1/convertidorTemp`  
+**Body**
+```json
+{ "celsius": 20 }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller1/convertidorTemp \
+  -H "Content-Type: application/json" \
+  -d '{"celsius":20}'
+```
+
+2) **resolvedor** *(fórmula cuadrática)*  
+`POST /api/taller1/resolvedor`  
+**Body** (`op` = `"pos"` | `"neg"`)
+```json
+{ "a": 1, "b": 5, "c": 4, "op": "pos" }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller1/resolvedor \
+  -H "Content-Type: application/json" \
+  -d '{"a":1,"b":5,"c":4,"op":"pos"}'
+```
+
+3) **mejorParidad**  
+`POST /api/taller1/mejorParidad`  
+**Body**
+```json
+{ "num": 7 }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller1/mejorParidad \
+  -H "Content-Type: application/json" \
+  -d '{"num":7}'
+```
+
+4) **peorParidad** *(válido 1..10)*  
+`POST /api/taller1/peorParidad`  
+**Body**
+```json
+{ "num": 9 }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller1/peorParidad \
+  -H "Content-Type: application/json" \
+  -d '{"num":9}'
+```
+
+---
+
+### 🧪 Taller 2 — Prefijo: `/api/taller2`
+1) **findMax**  
+`POST /api/taller2/findMax`  
+**Body**
+```json
+{ "numbers": [3, 17, -1, 4, -19] }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller2/findMax \
+  -H "Content-Type: application/json" \
+  -d '{"numbers":[3,17,-1,4,-19]}'
+```
+
+2) **includes**  
+`POST /api/taller2/includes`  
+**Body**
+```json
+{ "numbers": [3, 17, -1, 4, -19], "number": 4 }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller2/includes \
+  -H "Content-Type: application/json" \
+  -d '{"numbers":[3,17,-1,4,-19],"number":4}'
+```
+
+3) **sum**  
+`POST /api/taller2/sum`  
+**Body**
+```json
+{ "numbers": [3, 17, -1, 4, -19] }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller2/sum \
+  -H "Content-Type: application/json" \
+  -d '{"numbers":[3,17,-1,4,-19]}'
+```
+
+4) **missingNumbers**  
+`POST /api/taller2/missingNumbers`  
+**Body**
+```json
+{ "numbers": [7, 2, 4, 6, 3, 9] }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller2/missingNumbers \
+  -H "Content-Type: application/json" \
+  -d '{"numbers":[7,2,4,6,3,9]}'
+```
+
+---
+
+### 🧪 Taller 3 — Prefijo: `/api/taller3`
+1) **desglosarString**  
+`POST /api/taller3/desglosarString`  
+**Body**
+```json
+{ "texto": "murcielagos", "tipo": "vocales" }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller3/desglosarString \
+  -H "Content-Type: application/json" \
+  -d '{"texto":"murcielagos","tipo":"vocales"}'
+```
+
+2) **twoSum**  
+`POST /api/taller3/twoSum`  
+**Body**
+```json
+{ "numbers": [2, 7, 11, 15], "target": 9 }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller3/twoSum \
+  -H "Content-Type: application/json" \
+  -d '{"numbers":[2,7,11,15],"target":9}'
+```
+
+3) **conversionRomana**  
+`POST /api/taller3/conversionRomana`  
+**Body**
+```json
+{ "romano": "MCMXCVII" }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller3/conversionRomana \
+  -H "Content-Type: application/json" \
+  -d '{"romano":"MCMXCVII"}'
+```
+
+4) **descomposicion**  
+`POST /api/taller3/descomposicion`  
+**Body**
+```json
+{ "cadena": "malhumor,al,hum,humor,m,mal,malhu" }
+```
+**Curl**
+```bash
+curl -X POST http://localhost:3005/api/taller3/descomposicion \
+  -H "Content-Type: application/json" \
+  -d '{"cadena":"malhumor,al,hum,humor,m,mal,malhu"}'
+```
+---
+
+## 🧷 Notas
+- Arrays deben ser **numéricos** (sin strings).
+- `peorParidad` acepta números entre **1 y 10**.
