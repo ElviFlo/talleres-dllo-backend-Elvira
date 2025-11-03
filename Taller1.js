@@ -5,7 +5,7 @@ function convertidorTemp(cls) {
 }
 let cls = -40
 console.log("Punto 1:")
-console.log(cls + " a grados Fahrenheit es igual a = " + ConvertidorTemp(cls))
+console.log(cls + " a grados Fahrenheit es igual a = " + convertidorTemp(cls))
 
 // Punto #2
 function resolvedor(a, b, c, op) {

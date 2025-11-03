@@ -1,0 +1,26 @@
+{
+  "name": "talleres-dllo-backend",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElviFlo/talleres-dllo-backend-Elvira.git"
+  },
+  "homepage": "https://github.com/adechlien/talleres-dllo-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "description": "Este repositorio contiene los **talleres prácticos** de la asignatura Desarrollo Web Backend (2025).  \r Cada taller corresponde a un archivo independiente (`taller-01.js`, `taller-02.js`) y se ejecuta con **Node.js** desde la terminal.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElviFlo/talleres-dllo-backend-Elvira/issues"
+  }
+}
