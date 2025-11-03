@@ -1,5 +1,5 @@
 // Punto #1
-function ConvertidorTemp(cls) {
+function convertidorTemp(cls) {
     let temp_far = cls * (9 / 5) + 32
     return temp_far
 }
@@ -81,4 +81,9 @@ let num2 = 9
 
 console.log("El número " + num2+ " es " + peorParidad(num2))
 
-
+module.exports = {
+  convertidorTemp,
+  resolvedor,
+  mejorParidad,
+  peorParidad,
+};

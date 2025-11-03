@@ -111,3 +111,10 @@ let cdn = "malhumor,al,hum,humor,m,mal,malhu";
 console.log("\nPunto 3:");
 console.log("En la cadena \""+ cdn + "\" las dos palabras que componen la palabra a descomponer son:");
 console.log(descomposicion(cdn));
+
+module.exports = {
+  desglosarString,
+  twoSum,
+  conversionRomana,
+  descomposicion,
+};

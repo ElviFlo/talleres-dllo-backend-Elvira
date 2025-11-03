@@ -56,22 +56,6 @@ function missingNumbers(lista) {
     }
 
     for (let num = min; num <= max; num++) {
-        /*
-        let encontrado = false;
-        for (let j = 0; j < lista.length; j++) {
-            if (lista[j] === num) {
-                encontrado = true;
-                break;
-            }
-        }
-
-        if (!encontrado) {
-            missings.push(num);
-        }
-        
-        */
-
-        
         let find = includes(lista,num);
         if (!find){
             missings.push(num);
@@ -85,3 +69,10 @@ function missingNumbers(lista) {
 let lista2 = [7,2,4,6,3,9]
 console.log("\nPunto 4:");
 console.log("Los elementos de esta lista = [" + lista + "] que no están presentes son: [" + missingNumbers(lista2)+"]");
+
+module.exports = {
+  findMax,
+  includes,
+  sum,
+  missingNumbers,
+};
